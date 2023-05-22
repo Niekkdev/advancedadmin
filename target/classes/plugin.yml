@@ -1,0 +1,76 @@
+name: AdvancedAdmin
+authors:
+  - Niekkdev
+  - Jqstln
+  - Codr
+description: AdvancedAdmin is your admin plugin for your server!
+version: '1.0'
+website: https://www.spigotmc.org/resources/advancedadmin.94311/
+
+main: me.niekkdev.advancedadmin.Main
+api-version: 1.13
+
+commands:
+  kick:
+    description: Kick a player off the server.
+    usage: /<command> <player> <reason>
+    permission: advancedadmin.kick
+  ban:
+    description: Permaban a player off the server.
+    usage: /ban <player> <reason>
+    permission: advancedadmin.ban
+  unban:
+    description: Unban a player off the server.
+    usage: /unban <player>
+    permission: advancedadmin.unban
+  kill:
+    description: Kill a player.
+    aliases: [die]
+    usage: /kill <player>
+    permission: advancedadmin.kill
+  cannon:
+    description: Launch a magma cube in the air.
+    usage: /cannon
+    permission: advancedadmin.cannon
+  msg:
+    description: Send a message to a player.
+    usage: /msg <player>
+  staffchat:
+    description: Send a message in the staff chat.
+    usage: /staffchat <message>
+    permission: advancedadmin.staffchat
+  mute:
+    description: Mute a player in chat.
+    usage: /mute <player>
+    permission: advancedadmin.mute
+  unmute:
+    description: Unmute a player in chat.
+    usage: /unmute <player>
+    permission: advancedadmin.unmute
+  freeze:
+    description: Freeze a player in the game.
+    usage: /freeze <player>
+    permission: advancedadmin.freeze
+  unfreeze:
+    description: Unfreeze a player in the game.
+    usage: /unfreeze <player>
+    permission: advancedadmin.freeze
+  fly:
+    description: Fly in the game.
+    usage: /fly <player>
+    permission: advancedadmin.fly
+  killmob:
+    description: Remove mobs in your location.
+    aliases: [killmob]
+    usage: /killmobs <region>
+    permission: advancedadmin.removemob
+  teleport:
+    description: Teleport to someone.
+    aliases: [tp]
+    usage: /tp <player>
+    permission: advancedadmin.teleport
+  advancedadmin:
+    description: AdvancedAdmin commands.
+    usage: /advancedadmin
+    aliases: [aa]
+    permission: advancedadmin.use

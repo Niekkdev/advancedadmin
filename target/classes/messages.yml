@@ -1,0 +1,89 @@
+########################################
+#### AdvancedAdmin Messages Config #####
+##### This is the default config! ######
+########################################
+
+general:
+  error: "&cThis command can only be executed by players!"
+  no_permission: "&cYou don't have the right permissions to use this command!"
+
+ban:
+  ban_player_reason: "&fYou have banned %player% for reason &c%reason%!"
+  player_not_found: "&cCould not find player!"
+  usage_player_reason: "&fUsage: /ban <player> <reason>"
+
+cannon:
+  launch_message: "&5&lBoom!" # You can also disable this in config.yml!
+
+fly:
+  enabled: "&aFlight enabled."
+  disabled: "&cFlight disabled."
+  invalid_speed: "&cInvalid fly speed. Valid speeds: slow, normal, fast!"
+  player_not_found: "&cCould not find player!"
+  player_speed: "&fSet fly speed of player %player% to %speed%."
+  speed: "&fYour fly speed has been set to &e%speed%&f."
+  usage_speed_player: "&fUsage: /fly <speed> <player>"
+
+freeze:
+  frozen_by_player: "&cYou are frozen by %player%."
+  frozen_message: "&cYou are currently frozen! Join the Teamspeak at: ts.niekkdev.me" # You can also disable this in config.yml!
+  player_frozen: "&aYou froze %player%!"
+  player_is_frozen: "&fThis player is already frozen!"
+  player_not_found: "&cCould not find player!"
+  usage_freeze: "&fUsage: /freeze <player>"
+
+kick:
+  kick_player_reason: "&fYou have kicked %player% for reason: &c%reason%!"
+  player_not_found: "&cCould not find player!"
+  usage_kick: "&fUsage: /kick <player> <reason>"
+
+kill:
+  killed_player: "&cYou have killed %player%."
+  player: "&cYou have opted to die."
+  player_not_found: "&cCould not find player!"
+  usage_die: "&fUsage: /die <player>"
+  usage_kill: "&fUsage: /kill <player>"
+
+killmob:
+  remove_chunk: "&fRemoved all mobs in your current &cchunk."
+  remove_world: "&fRemoved all mobs in your current &cworld."
+  usage_killmob: "&fUsage: /killmobs <chunk|world>"
+
+msg:
+  player_not_found: "&cPlayer %player% is offline or does not exist."
+  usage_msg: "&fUsage: /msg <player> <message>"
+  msg_player_prefix: "&a%player% &r&7>> &aMe:&r&7 %message%"
+  player_msg_prefix: "&aMe &r&7>> &a%player%:&r&7 %message%"
+
+mute:
+  mute_by_player: "&cYou are muted by %player%."
+  mute_message: "&cYou can't send messages because you are muted."
+  mute_player: "&aYou muted %player%!"
+  player_is_muted: "&fThis player is already muted!"
+  player_not_found: "&cCould not find player!"
+  usage_mute: "&fUsage: /mute <player>"
+
+teleport:
+  coords: "&fTeleported to coordinates: &e%X%&f, &e%Y%&f, &e%Z%."
+  invalid_numbers: "&cInvalid coordinates. Please provide valid numbers."
+  player_not_found: "&cCould not find player!"
+  player_tp_to_player: "Teleported %player% to %destination%."
+  tp_to_player: "&fTeleported to %player%."
+  usage_tp: "&fUsage: /tp <player>"
+
+unmute:
+  player_not_found: "&cCould not find player!"
+  player_unmute: "&a%player% is unmuted."
+  player_not_muted: "&c%player% is not muted."
+  usage_unmute: "&fUsage: /unmute <player>"
+
+unban:
+  player_not_banned: "&cCould not find player!"
+  player_unban: "&f%player% has been unbanned."
+  usage_player: "&fUsage: /unban <player>"
+
+unfreeze:
+  is_unfrozen: "&a%player% is unfrozen."
+  is_frozen: "&c%player% is not frozen."
+  player_not_found: "&cCould not find player!"
+  usage_unfreeze: "&fUsage: /unfreeze <player>"

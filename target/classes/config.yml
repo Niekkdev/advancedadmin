@@ -1,0 +1,25 @@
+########################################
+##### AdvancedAdmin Configuration ######
+########################################
+
+# Prefix configration, this will allow you to set
+# any prefix for the plugin.
+prefix: "&c&lAdvancedAdmin &r&7>> "
+
+# Chatprfix's
+staffchat_prefix: "&aStaffchat &r&7>> &f%player% &r&7>> %message%"
+chat_prefix: "&f%player% &r&7>> "
+
+# Freeze configuration, this will show the freeze
+# message when ur trying to move, message can be configured
+# in messages.yml
+showFreezeMessage: true
+
+# Cannon configuration, this will allow you to let the cannon
+# break blocks when shooting.
+letCannonBreakBlocks: false
+
+# Mute configuration, this will show the mute
+# message when ur trying to talk, message can be configured
+# in messages.yml
+showMuteMessage: true
