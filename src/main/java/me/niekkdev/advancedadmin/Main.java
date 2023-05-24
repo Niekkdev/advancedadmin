@@ -1,28 +1,45 @@
 package me.niekkdev.advancedadmin;
 
 import me.niekkdev.advancedadmin.Commands.*;
+import me.niekkdev.advancedadmin.Commands.BanCommands.BanCommand;
+import me.niekkdev.advancedadmin.Commands.BanCommands.UnbanCommand;
+import me.niekkdev.advancedadmin.Commands.FlyCommands.FlyCommand;
+import me.niekkdev.advancedadmin.Commands.FreezeCommands.FreezeCommand;
+import me.niekkdev.advancedadmin.Commands.FreezeCommands.UnfreezeCommand;
+import me.niekkdev.advancedadmin.Commands.KickCommands.KickCommand;
+import me.niekkdev.advancedadmin.Commands.KillCommands.KillCommand;
+import me.niekkdev.advancedadmin.Commands.KillCommands.KillmobsCommand;
+import me.niekkdev.advancedadmin.Commands.MsgCommands.MsgCommand;
+import me.niekkdev.advancedadmin.Commands.MuteCommands.MuteCommand;
+import me.niekkdev.advancedadmin.Commands.MuteCommands.UnmuteCommand;
+import me.niekkdev.advancedadmin.Commands.SpawnCommands.SpawnCommand;
+import me.niekkdev.advancedadmin.Commands.TeleportCommands.TeleportCommand;
 import me.niekkdev.advancedadmin.Configuration.messages;
 import me.niekkdev.advancedadmin.EventManager.*;
 import org.bukkit.ChatColor;
+import org.bukkit.Location;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.UUID;
+import java.util.*;
 
 public final class Main extends JavaPlugin implements Listener {
     private static final List<UUID> freezed = new ArrayList<>();
     private static final List<UUID> muted = new ArrayList<>();
     private final List<Player> mutedPlayers = new ArrayList<>();
     public static messages messagesConfig;
+
     public static List<UUID> getFreezed() {
         return freezed;
     }
+
     public static List<UUID> getMuted() {
         return muted;
     }
+
+    private Map<String, Location> warps;
+
     public static String showPrefix(String message) {
         return ChatColor.translateAlternateColorCodes('&', message);
     }
@@ -73,6 +90,8 @@ public final class Main extends JavaPlugin implements Listener {
         getCommand("teleport").setExecutor(new TeleportCommand(this));
         getCommand("advancedadmin").setExecutor(new AVACommand(this));
         getCommand("advancedadmin").setTabCompleter(new AVACommand(this));
+        getCommand("setspawn").setExecutor(new SpawnCommand(this));
+        getCommand("spawn").setExecutor(new SpawnCommand(this));
     }
 
     private void registerEventListeners() {
@@ -81,7 +100,9 @@ public final class Main extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(new MuteListener(this), this);
         getServer().getPluginManager().registerEvents(new ChatEvent(this), this);
     }
+
     public List<Player> getMutedPlayers() {
         return mutedPlayers;
     }
+
 }

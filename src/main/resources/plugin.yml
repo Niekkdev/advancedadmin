@@ -74,3 +74,23 @@ commands:
     usage: /advancedadmin
     aliases: [aa]
     permission: advancedadmin.use
+  setspawn:
+    description: set a spawn
+    usage: /advancedadmin
+    permission: advancedadmin.setspawn
+  spawn:
+    description: go to the spawn
+    usage: /advancedadmin
+    permission: advancedadmin.spawn
+  warp:
+    description: go to the spawn
+    usage: /advancedadmin
+    permission: advancedadmin.warp
+  setwarp:
+    description: go to the spawn
+    usage: /advancedadmin
+    permission: advancedadmin.setwarp
+  delwarp:
+    description: go to the spawn
+    usage: /advancedadmin
+    permission: advancedadmin.setwarp
