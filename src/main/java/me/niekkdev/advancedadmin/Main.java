@@ -92,6 +92,9 @@ public final class Main extends JavaPlugin implements Listener {
         getCommand("advancedadmin").setTabCompleter(new AVACommand(this));
         getCommand("setspawn").setExecutor(new SpawnCommand(this));
         getCommand("spawn").setExecutor(new SpawnCommand(this));
+        getCommand("invsee").setExecutor(new InvseeCommand(this));
+        getCommand("enderchest").setExecutor(new EnderchestCommand(this));
+        getCommand("vanish").setExecutor(new VanishCommand(this));
     }
 
     private void registerEventListeners() {
@@ -99,6 +102,7 @@ public final class Main extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(new MoveListener(this), this);
         getServer().getPluginManager().registerEvents(new MuteListener(this), this);
         getServer().getPluginManager().registerEvents(new ChatEvent(this), this);
+        getServer().getPluginManager().registerEvents(new VanishCommand(this), this);
     }
 
     public List<Player> getMutedPlayers() {

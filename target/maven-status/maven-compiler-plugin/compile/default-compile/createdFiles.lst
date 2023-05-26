@@ -14,14 +14,17 @@ me\niekkdev\advancedadmin\Commands\BanCommands\BanCommand.class
 me\niekkdev\advancedadmin\Main.class
 me\niekkdev\advancedadmin\Commands\CannonCommand.class
 me\niekkdev\advancedadmin\Commands\SpawnCommands\SpawnCommand$1.class
+me\niekkdev\advancedadmin\Commands\InvseeCommand.class
 me\niekkdev\advancedadmin\Metrics.class
 me\niekkdev\advancedadmin\Commands\FreezeCommands\UnfreezeCommand.class
+me\niekkdev\advancedadmin\Commands\VanishCommand.class
 me\niekkdev\advancedadmin\Commands\AVACommand.class
 me\niekkdev\advancedadmin\Commands\FlyCommands\FlyCommand.class
 me\niekkdev\advancedadmin\Metrics$SimplePie.class
 me\niekkdev\advancedadmin\Commands\BanCommands\UnbanCommand.class
 me\niekkdev\advancedadmin\Metrics$JsonObjectBuilder$JsonObject.class
 me\niekkdev\advancedadmin\Metrics$SingleLineChart.class
+me\niekkdev\advancedadmin\Commands\EnderchestCommand.class
 me\niekkdev\advancedadmin\Configuration\messages.class
 me\niekkdev\advancedadmin\EventManager\StaffChat.class
 me\niekkdev\advancedadmin\Commands\MsgCommands\MsgCommand.class
@@ -34,3 +37,4 @@ me\niekkdev\advancedadmin\Commands\KillCommands\KillmobsCommand.class
 me\niekkdev\advancedadmin\Metrics$MultiLineChart.class
 me\niekkdev\advancedadmin\EventManager\ChatEvent.class
 me\niekkdev\advancedadmin\Metrics$AdvancedPie.class
+me\niekkdev\advancedadmin\Commands\VanishCommand$1.class

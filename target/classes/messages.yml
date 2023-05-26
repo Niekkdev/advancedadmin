@@ -15,6 +15,10 @@ ban:
 cannon:
   launch_message: "&5&lBoom!" # You can also disable this in config.yml!
 
+enderchest:
+  player_not_found: "&cCould not find player!"
+  please_provide: "&cPlease provide a player name."
+
 fly:
   enabled: "&aFlight enabled."
   disabled: "&cFlight disabled."
@@ -31,6 +35,10 @@ freeze:
   player_is_frozen: "&fThis player is already frozen!"
   player_not_found: "&cCould not find player!"
   usage_freeze: "&fUsage: /freeze <player>"
+
+invsee:
+  player_not_found: "&cCould not find player!"
+  please_provide: "&cPlease provide a player name."
 
 kick:
   kick_player_reason: "&fYou have kicked %player% for reason: &c%reason%!"
@@ -94,3 +102,7 @@ unfreeze:
   player_unfrozen: "&c%player% is not frozen."
   player_not_found: "&cCould not find player!"
   usage_unfreeze: "&fUsage: /unfreeze <player>"
+
+vanish:
+  visible: "&aYou are visible again."
+  invisible: "&aYou are now invisible."

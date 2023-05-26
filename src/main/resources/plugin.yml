@@ -76,21 +76,21 @@ commands:
     permission: advancedadmin.use
   setspawn:
     description: set a spawn
-    usage: /advancedadmin
+    usage: /setspawn
     permission: advancedadmin.setspawn
   spawn:
     description: go to the spawn
-    usage: /advancedadmin
+    usage: /spawn
     permission: advancedadmin.spawn
-  warp:
-    description: go to the spawn
-    usage: /advancedadmin
-    permission: advancedadmin.warp
-  setwarp:
-    description: go to the spawn
-    usage: /advancedadmin
-    permission: advancedadmin.setwarp
-  delwarp:
-    description: go to the spawn
-    usage: /advancedadmin
-    permission: advancedadmin.setwarp
+  invsee:
+    description: go to players inventorys
+    usage: /invsee <player>
+    permission: advancedadmin.invsee
+  enderchest:
+    description: go to players enderchest
+    usage: /enderchest <player>
+    permission: advancedadmin.enderchest
+  vanish:
+    description: go in to vanish
+    usage: /vanish
+    permission: advancedadmin.vanish
