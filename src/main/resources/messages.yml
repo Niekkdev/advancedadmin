@@ -7,6 +7,13 @@ general:
   error: "&cThis command can only be executed by players!"
   no_permission: "&cYou don't have the right permissions to use this command!"
 
+chickenfly:
+  cannot_wear: "&cYou cannot wear the chicken head because you are already wearing a helmet."
+  disabled: "&cYou have just disabled the chickenfly."
+  enabled: "&aYou have just enabled the chickenfly."
+  execute_command: "&cThis command can only be executed in adventure or survival mode."
+  time_ended: "&cYour chicken flying time has ended."
+
 ban:
   banned_player_reason: "&fYou have banned %player% for reason &c%reason%!"
   player_not_found: "&cCould not find player!"
@@ -35,6 +42,12 @@ freeze:
   player_is_frozen: "&fThis player is already frozen!"
   player_not_found: "&cCould not find player!"
   usage_freeze: "&fUsage: /freeze <player>"
+
+gamemode:
+  player_not_found: "&cCould not find player!"
+  player_gamemode: "&fYour game mode has been updated to &e%gamemode%&f."
+  setplayer_gamemode: "The game mode of &e%player%&f has been updated to &e%gamemode%&f."
+  usage_gamemode: "&fUsage: /gamemode <gamemode> <player>"
 
 invsee:
   player_not_found: "&cCould not find player!"
@@ -71,6 +84,9 @@ mute:
   player_not_found: "&cCould not find player!"
   usage_mute: "&fUsage: /mute <player>"
 
+ping:
+  ping: "&fYour server ping is: &e%ping%&f ms"
+
 spawn:
   current_location: "&aSpawn location has been set to your current location."
   invalid_world: "&cSpawn location world is not valid or does not exist."
@@ -106,3 +122,4 @@ unfreeze:
 vanish:
   visible: "&aYou are visible again."
   invisible: "&aYou are now invisible."
+

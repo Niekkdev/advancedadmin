@@ -1,0 +1,9 @@
+# You can modify your /spawn coordinates here, and they
+# will be saved when you do it ingame.
+spawn:
+  world: world
+  x: 53.0
+  y: 72.0
+  z: 3435.0
+  yaw: 104.548065
+  pitch: 19.649958

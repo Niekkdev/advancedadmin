@@ -1,4 +1,4 @@
-package me.niekkdev.advancedadmin.Commands;
+package me.niekkdev.advancedadmin.Commands.InvseeCommand;
 
 import me.niekkdev.advancedadmin.Main;
 import org.bukkit.command.Command;

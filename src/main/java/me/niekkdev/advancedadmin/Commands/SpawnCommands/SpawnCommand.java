@@ -6,10 +6,14 @@ import org.bukkit.World;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.configuration.file.FileConfiguration;
+import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.scheduler.BukkitRunnable;
 
+import java.io.File;
+import java.io.IOException;
 import java.security.Permission;
 import java.util.HashMap;
 import java.util.Map;
@@ -38,14 +42,20 @@ public class SpawnCommand implements CommandExecutor {
         if (player.hasPermission("advancedadmin.setspawn")) {
             UUID playerUUID = player.getUniqueId();
             if (command.getName().equalsIgnoreCase("setspawn")) {
+                File file = new File("plugins/AdvancedAdmin", "spawn.yml");
+                FileConfiguration spawn = YamlConfiguration.loadConfiguration(file);
                 Location spawnLocation = player.getLocation();
-                plugin.getConfig().set("spawn.world", player.getWorld().getName());
-                plugin.getConfig().set("spawn.x", spawnLocation.getX());
-                plugin.getConfig().set("spawn.y", spawnLocation.getY());
-                plugin.getConfig().set("spawn.z", spawnLocation.getZ());
-                plugin.getConfig().set("spawn.yaw", spawnLocation.getYaw());
-                plugin.getConfig().set("spawn.pitch", spawnLocation.getPitch());
-                plugin.saveConfig();
+                spawn.set("spawn.world", player.getWorld().getName());
+                spawn.set("spawn.x", spawnLocation.getX());
+                spawn.set("spawn.y", spawnLocation.getY());
+                spawn.set("spawn.z", spawnLocation.getZ());
+                spawn.set("spawn.yaw", spawnLocation.getYaw());
+                spawn.set("spawn.pitch", spawnLocation.getPitch());
+                try {
+                    spawn.save(file);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
                 String message = Main.messagesConfig.getMessage("spawn.current_location");
                 player.sendMessage(prefix + message);
                 return true;
@@ -61,12 +71,13 @@ public class SpawnCommand implements CommandExecutor {
                         return true;
                     }
 
-                    String spawnWorld = plugin.getConfig().getString("spawn.world");
-                    double spawnX = plugin.getConfig().getDouble("spawn.x");
-                    double spawnY = plugin.getConfig().getDouble("spawn.y");
-                    double spawnZ = plugin.getConfig().getDouble("spawn.z");
-                    float spawnYaw = (float) plugin.getConfig().getDouble("spawn.yaw");
-                    float spawnPitch = (float) plugin.getConfig().getDouble("spawn.pitch");
+                    FileConfiguration spawn = YamlConfiguration.loadConfiguration(new File("plugins/AdvancedAdmin", "spawn.yml"));
+                    String spawnWorld = spawn.getString("spawn.world");
+                    double spawnX = spawn.getDouble("spawn.x");
+                    double spawnY = spawn.getDouble("spawn.y");
+                    double spawnZ = spawn.getDouble("spawn.z");
+                    float spawnYaw = (float) spawn.getDouble("spawn.yaw");
+                    float spawnPitch = (float) spawn.getDouble("spawn.pitch");
 
                     if (spawnWorld == null) {
                         String message = Main.messagesConfig.getMessage("spawn.set_spawn");

@@ -35,6 +35,8 @@ commands:
   msg:
     description: Send a message to a player.
     usage: /msg <player>
+    permission: advancedadmin.msg
+
   staffchat:
     description: Send a message in the staff chat.
     usage: /staffchat <message>
@@ -75,22 +77,34 @@ commands:
     aliases: [aa]
     permission: advancedadmin.use
   setspawn:
-    description: set a spawn
+    description: Set a spawn
     usage: /setspawn
     permission: advancedadmin.setspawn
   spawn:
-    description: go to the spawn
+    description: Go to the spawn
     usage: /spawn
     permission: advancedadmin.spawn
   invsee:
-    description: go to players inventorys
+    description: Go to players inventorys
     usage: /invsee <player>
     permission: advancedadmin.invsee
   enderchest:
-    description: go to players enderchest
+    description: Go to players enderchest
     usage: /enderchest <player>
     permission: advancedadmin.enderchest
   vanish:
-    description: go in to vanish
+    description: Go in to vanish
     usage: /vanish
     permission: advancedadmin.vanish
+  gamemode:
+    description: Change your gamemode
+    usage: /gamemode <gamemode> <player>
+    permission: advancedadmin.gamemode
+  ping:
+    description: Check your ping
+    usage: /ping
+    permission: advancedadmin.ping
+  chickenfly:
+    description: Chicken
+    usage: /chickenfly
+    permission: advancedadmin.chickenfly

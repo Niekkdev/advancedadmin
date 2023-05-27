@@ -11,6 +11,9 @@ prefix: '&c&lAdvancedAdmin &r&7>> '
 staffchat_prefix: '&aStaffchat &r&7>> &f%player% &r&7>> %message%'
 chat_prefix: '&f%player% &r&7>> '
 
+# enable or disable the chatprefix
+chat_prefix_enabled: true
+
 # Freeze configuration, this will show the freeze
 # message when ur trying to move, message can be configured
 # in messages.yml
@@ -27,13 +30,3 @@ showMuteMessage: true
 
 # Set the cooldown for your "/spawn" command here.
 cooldown: 3
-
-# You can modify your /spawn coordinates here, and they
-# will be saved when you do it ingame.
-spawn:
-  world: world
-  x: 53.0
-  y: 72.0
-  z: 3435.0
-  yaw: 104.548065
-  pitch: 19.649958

@@ -20,6 +20,10 @@ public class ChatEvent implements Listener {
 
     @EventHandler
     public void onPlayerChat(final AsyncPlayerChatEvent event) {
+        if (!plugin.getConfig().getBoolean("chat_prefix_enabled")) {
+            return;
+        }
+
         String chat_prefix = Main.showPrefix(plugin.getConfig().getString("chat_prefix"));
         Player player = event.getPlayer();
 

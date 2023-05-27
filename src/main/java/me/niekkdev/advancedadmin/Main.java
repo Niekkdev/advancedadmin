@@ -6,6 +6,8 @@ import me.niekkdev.advancedadmin.Commands.BanCommands.UnbanCommand;
 import me.niekkdev.advancedadmin.Commands.FlyCommands.FlyCommand;
 import me.niekkdev.advancedadmin.Commands.FreezeCommands.FreezeCommand;
 import me.niekkdev.advancedadmin.Commands.FreezeCommands.UnfreezeCommand;
+import me.niekkdev.advancedadmin.Commands.InvseeCommand.EnderchestCommand;
+import me.niekkdev.advancedadmin.Commands.InvseeCommand.InvseeCommand;
 import me.niekkdev.advancedadmin.Commands.KickCommands.KickCommand;
 import me.niekkdev.advancedadmin.Commands.KillCommands.KillCommand;
 import me.niekkdev.advancedadmin.Commands.KillCommands.KillmobsCommand;
@@ -95,6 +97,10 @@ public final class Main extends JavaPlugin implements Listener {
         getCommand("invsee").setExecutor(new InvseeCommand(this));
         getCommand("enderchest").setExecutor(new EnderchestCommand(this));
         getCommand("vanish").setExecutor(new VanishCommand(this));
+        getCommand("gamemode").setExecutor(new GamemodeCommands(this));
+        getCommand("gamemode").setTabCompleter(new GamemodeCommands(this));
+        getCommand("ping").setExecutor(new PingCommand(this));
+        getCommand("chickenfly").setExecutor(new ChickenflyCommand(this));
     }
 
     private void registerEventListeners() {
@@ -103,6 +109,7 @@ public final class Main extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(new MuteListener(this), this);
         getServer().getPluginManager().registerEvents(new ChatEvent(this), this);
         getServer().getPluginManager().registerEvents(new VanishCommand(this), this);
+        getServer().getPluginManager().registerEvents(new ChickenflyCommand(this), this);
     }
 
     public List<Player> getMutedPlayers() {
