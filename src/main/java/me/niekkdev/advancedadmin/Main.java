@@ -6,22 +6,27 @@ import me.niekkdev.advancedadmin.Commands.BanCommands.UnbanCommand;
 import me.niekkdev.advancedadmin.Commands.FlyCommands.FlyCommand;
 import me.niekkdev.advancedadmin.Commands.FreezeCommands.FreezeCommand;
 import me.niekkdev.advancedadmin.Commands.FreezeCommands.UnfreezeCommand;
-import me.niekkdev.advancedadmin.Commands.InvseeCommand.EnderchestCommand;
-import me.niekkdev.advancedadmin.Commands.InvseeCommand.InvseeCommand;
+import me.niekkdev.advancedadmin.Commands.GamemodeCommands.GamemodeCommands;
+import me.niekkdev.advancedadmin.Commands.GodmodeCommands.GodmodeCommand;
+import me.niekkdev.advancedadmin.Commands.InvseeCommands.EnderchestCommand;
+import me.niekkdev.advancedadmin.Commands.InvseeCommands.InvseeCommand;
 import me.niekkdev.advancedadmin.Commands.KickCommands.KickCommand;
 import me.niekkdev.advancedadmin.Commands.KillCommands.KillCommand;
 import me.niekkdev.advancedadmin.Commands.KillCommands.KillmobsCommand;
 import me.niekkdev.advancedadmin.Commands.MsgCommands.MsgCommand;
 import me.niekkdev.advancedadmin.Commands.MuteCommands.MuteCommand;
 import me.niekkdev.advancedadmin.Commands.MuteCommands.UnmuteCommand;
+import me.niekkdev.advancedadmin.Commands.PingCommands.PingCommand;
 import me.niekkdev.advancedadmin.Commands.SpawnCommands.SpawnCommand;
 import me.niekkdev.advancedadmin.Commands.TeleportCommands.TeleportCommand;
+import me.niekkdev.advancedadmin.Commands.VanishCommands.VanishCommand;
 import me.niekkdev.advancedadmin.Configuration.messages;
 import me.niekkdev.advancedadmin.EventManager.*;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
+import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.*;
@@ -51,6 +56,8 @@ public final class Main extends JavaPlugin implements Listener {
         getConfig().options().copyDefaults(true);
         saveDefaultConfig();
 
+        getServer().getPluginManager().registerEvents(this, this);
+
         new me.niekkdev.advancedadmin.UpdateChecker(this, 94311).getVersion(version -> {
             if (this.getDescription().getVersion().equals(version)) {
                 getLogger().info("There is not a new update available.");
@@ -61,6 +68,9 @@ public final class Main extends JavaPlugin implements Listener {
 
         int pluginId = 18532;
         Metrics metrics = new Metrics(this, pluginId);
+
+        PluginManager pluginManager = getServer().getPluginManager();
+        pluginManager.registerEvents(new VanishCommand(this), this);
 
         messagesConfig = new messages(this);
         registerCommands();
@@ -101,6 +111,10 @@ public final class Main extends JavaPlugin implements Listener {
         getCommand("gamemode").setTabCompleter(new GamemodeCommands(this));
         getCommand("ping").setExecutor(new PingCommand(this));
         getCommand("chickenfly").setExecutor(new ChickenflyCommand(this));
+        getCommand("god").setExecutor(new GodmodeCommand(this));
+        getCommand("godmode").setExecutor(new GodmodeCommand(this));
+        getCommand("feed").setExecutor(new FeedCommand(this));
+        getCommand("heal").setExecutor(new HealCommand(this));
     }
 
     private void registerEventListeners() {
@@ -108,8 +122,8 @@ public final class Main extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(new MoveListener(this), this);
         getServer().getPluginManager().registerEvents(new MuteListener(this), this);
         getServer().getPluginManager().registerEvents(new ChatEvent(this), this);
-        getServer().getPluginManager().registerEvents(new VanishCommand(this), this);
         getServer().getPluginManager().registerEvents(new ChickenflyCommand(this), this);
+        getServer().getPluginManager().registerEvents(new VanishCommand(this), this);
     }
 
     public List<Player> getMutedPlayers() {

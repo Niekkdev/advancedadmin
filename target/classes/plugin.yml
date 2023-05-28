@@ -4,7 +4,7 @@ authors:
   - Jqstln
   - Codr
 description: AdvancedAdmin is your admin plugin for your server!
-version: '1.0.5'
+version: '1.0.6'
 website: https://www.spigotmc.org/resources/advancedadmin.94311/
 
 main: me.niekkdev.advancedadmin.Main
@@ -36,7 +36,6 @@ commands:
     description: Send a message to a player.
     usage: /msg <player>
     permission: advancedadmin.msg
-
   staffchat:
     description: Send a message in the staff chat.
     usage: /staffchat <message>
@@ -108,3 +107,19 @@ commands:
     description: Chicken
     usage: /chickenfly
     permission: advancedadmin.chickenfly
+  godmode:
+    description: Godemode
+    usage: /godemode
+    permission: advancedadmin.chickenfly
+  god:
+    description: Choose a godemode
+    usage: /god
+    permission: advancedadmin.godemode
+  feed:
+    description: Feed a player
+    usage: /feed <player>
+    permission: advancedadmin.feed
+  heal:
+    description: Heal a player
+    usage: /heal <player>
+    permission: advancedadmin.heal

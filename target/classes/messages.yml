@@ -26,6 +26,12 @@ enderchest:
   player_not_found: "&cCould not find player!"
   please_provide: "&cPlease provide a player name."
 
+feed:
+  fed_player: "&aYou have fed %player%."
+  feed: "&aYou have been fed."
+  player_not_found: "&cCould not find player!"
+  usage_feed: "&fUsage: /feed <player>"
+
 fly:
   enabled: "&aFlight enabled."
   disabled: "&cFlight disabled."
@@ -48,6 +54,16 @@ gamemode:
   player_gamemode: "&fYour game mode has been updated to &e%gamemode%&f."
   setplayer_gamemode: "The game mode of &e%player%&f has been updated to &e%gamemode%&f."
   usage_gamemode: "&fUsage: /gamemode <gamemode> <player>"
+
+godmode:
+  disabled: "&cGodemode disabled."
+  enabled: "&aGodemode enabled."
+
+heal:
+  player_not_found: "&cCould not find player!"
+  healed_player: "&aYou have healed %player%."
+  heal: "&aYou have been healed."
+  usage_heal: "&fUsage: /heal <player>"
 
 invsee:
   player_not_found: "&cCould not find player!"
