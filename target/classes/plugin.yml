@@ -119,7 +119,7 @@ commands:
     description: Feed a player
     usage: /feed <player>
     permission: advancedadmin.feed
-  heal:
-    description: Heal a player
-    usage: /heal <player>
-    permission: advancedadmin.heal
+  greatsword:
+    description: Get the greatsword
+    usage: /greatsword
+    permission: advancedadmin.greatsword.use

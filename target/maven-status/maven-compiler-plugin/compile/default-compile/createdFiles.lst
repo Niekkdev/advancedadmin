@@ -34,6 +34,7 @@ me\niekkdev\advancedadmin\Commands\BanCommands\BanCommand.class
 me\niekkdev\advancedadmin\Commands\FeedCommand.class
 me\niekkdev\advancedadmin\Commands\FreezeCommands\UnfreezeCommand.class
 me\niekkdev\advancedadmin\Commands\AVACommand.class
+me\niekkdev\advancedadmin\Commands\GreatswordCommand.class
 me\niekkdev\advancedadmin\Metrics$SimplePie.class
 me\niekkdev\advancedadmin\Commands\BanCommands\UnbanCommand.class
 me\niekkdev\advancedadmin\Commands\GodmodeCommands\GodmodeCommand.class
